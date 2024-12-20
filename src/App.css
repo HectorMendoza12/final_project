@@ -1,5 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
 .App {
   text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Markazi Text', serif;
+  font-weight: 500;
+  text-transform: capitalize;
+  letter-spacing: normal;
+  line-height: 1.5;
+}
+
+p, ul, li, span {
+  font-family: 'Karla', serif;
+  letter-spacing: normal;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .App-logo {

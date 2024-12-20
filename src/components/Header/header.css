@@ -1,0 +1,23 @@
+.header {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: 500px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #495E57;
+    font-size: 64px;
+}
+@media (max-width: 800px) {
+    .header {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .header img {
+        max-width: 100%;
+        height: auto;
+    }
+}
