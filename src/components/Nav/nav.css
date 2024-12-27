@@ -1,27 +1,9 @@
-.links a {
-    font-family: 'Markazi Text', serif;
-    font-size: 22px;
-}
-
 .navbar {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 1rem;
     background-color: white;
-}
-
-@media (max-width: 800px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-        padding: 0.5rem;
-    }
-
-    .navbar ul {
-        flex-direction: column;
-        gap: 1.2rem;
-        margin-bottom: 0.4rem;;
-    }
 }
 
 .links {
@@ -43,7 +25,7 @@
     padding: 0.5rem 1rem;
     border-radius: 4px;
     white-space: nowrap;
-    transition: background-color 0.3s;
+    transition: background-color 0.7s ease;
 }
 
 .links a:hover {
@@ -51,3 +33,63 @@
     background-color: #495E57;
 }
 
+.hamburguer {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(0, 0, 0);
+}
+
+@media (max-width: 800px) {
+
+    .navbar {
+        position: fixed;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .hamburguer {
+        display: block;
+        margin-right: 35px;
+    }
+
+    .links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        flex-direction: column;
+        background-color: white;
+        text-align: center;
+        gap: 0;
+        transition: left 0.3s ease-in-out;
+        z-index: 10;
+    }
+
+    .links.active {
+        left: 0;
+    }
+
+    .links > li {
+        margin: 16px 0;
+    }
+
+    .hamburguer.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburguer.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburguer.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}

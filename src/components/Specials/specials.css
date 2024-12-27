@@ -1,0 +1,81 @@
+.specials {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    height: 200px;
+}
+
+.specials > h3 {
+    font-weight: bold;
+    padding: 20px 30px;
+    text-align: center;
+    font-size: 64px;
+    margin: 90px 145px;
+}
+
+.order-online {
+    background-color: #465E57;
+    color: white;
+    border-radius: 16px;
+    border: none;
+    font-family: 'Markazi Text', serif;
+    font-weight: bold;
+    font-size: clamp(16px, 5vw, 25px);
+    padding: 20px 30px;
+    cursor: pointer;
+    white-space: nowrap;
+    justify-self: flex-end;
+}
+
+.order-online:hover {
+    background-color: #FBDABB;
+    color: rgb(0, 0, 0);
+    transition: all 0.3s ease;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 20px;
+    justify-items: center;
+}
+
+@media (max-width: 800px) {
+    .specials {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        justify-content: center;
+        gap: 1px;
+        width: 100%;
+    }
+
+    .specials > h3 {
+        font-weight: bold;
+        justify-self: center;
+        font-size: 64px;
+        margin: 30px 10px;
+        justify-content: center;
+    }
+
+    .specials > .order-online {
+        font-weight: bold;
+        padding: 10px 0;
+        text-align: center;
+        margin-bottom: 50px;
+        width: 30%;
+        justify-self: center;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        justify-content: center;
+        margin-top: 70px;
+        gap: 10px;
+        width: 100%;
+    }
+}

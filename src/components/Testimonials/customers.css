@@ -1,0 +1,31 @@
+.customersay {
+    display: flex;
+    flex-direction: column;
+    background-color: #a5c5ba;
+    border-radius: 16px;
+    margin: 30px;
+    width: 100%;
+    max-width: 350px;
+    overflow: hidden;
+    margin-bottom: 70px;
+}
+
+.customerinfo {
+    display: flex;
+    margin: 10px;
+}
+
+.customerpic {
+    display: flex
+}
+
+.customerpic > img {
+    height: 100px;
+    width: auto;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.customerreview {
+    padding: 0px 30px;
+}

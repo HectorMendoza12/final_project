@@ -1,0 +1,24 @@
+.bttnwrapper {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.bttn {
+    background-color: #F4CE14;
+    border-radius: 16px;
+    border: none;
+    font-family: 'Markazi Text', serif;
+    font-weight: bold;
+    font-size: clamp(16px, 5vw, 25px);
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 0;
+}
+
+.bttn:hover {
+    background-color: #EE9972;
+    color: white;
+    transition: all 0.3s ease;
+}

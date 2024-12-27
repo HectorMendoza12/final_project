@@ -1,0 +1,83 @@
+.chicago {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #495E57;
+    align-items: center;
+    justify-content: center;
+
+    height: 800px;
+
+}
+
+.info {
+    display: inline-block;
+    width: 30%;
+}
+
+.info > h2{
+    font-size: 64px; 
+    color: #F4CE14;
+    padding: 0px;
+    font-weight: bold;
+    height: 30px;
+}
+
+.info > h3{
+    font-weight: normal;
+    font-size: 40px;
+    color: white;
+    height: 35px;
+}
+
+.info > p{
+    font-weight: normal;
+    text-align: justify;
+}
+
+.imgs {
+    display: flex;
+    position: relative;
+    margin: 50px;
+    padding: 0;
+}
+
+.imgs1 > img {
+    position: relative;
+    top: -150px;
+    border-radius: 8px;
+    width: 320px;
+    height: 430px;
+    object-fit: cover;
+    transform: scaleX(-1);
+    object-position: -280px center;
+}
+
+.imgs2 > img {
+    position: absolute;
+    border-radius: 8px;
+    width: 320px;
+    height: 430px;
+    left: 160px;
+    top: 120px;
+    object-fit: cover;
+    object-position: -250px center;
+}
+
+@media (max-width: 800px) {
+    .info {
+        width: 80%;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    .imgs1 > img, .imgs2 > img {
+        width: 70%;
+        height: auto;
+        object-position: center;
+    }
+
+    .imgs2 > img {
+        top: -30px;
+        left: 100px;
+    }
+}

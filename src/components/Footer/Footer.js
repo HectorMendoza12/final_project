@@ -6,7 +6,7 @@ import insta from '../../img/insta.png'
 import './footer.css';
 const Footer = () => {
     return(
-        <footer className='footer'>
+        <footer className='footer' id="footer">
             <div className='logo'>
                 <img src={logo} alt="logo" width={140}/>
             </div>
@@ -31,15 +31,15 @@ const Footer = () => {
             <div className='icons'>
                 <p><b style={{ fontSize: '20px' }}>Our Social Media</b></p>
                 <a href="https://facebook.com" target="_blank"> <div className='icon-item'>
-                    <img src={facebook} alt="facebook-icon" width={50}/>
+                    <img src={facebook} alt="facebook-icon" className="social-icon"/>
                     <p>Facebook</p>
                 </div> </a>
                 <a href="https://x.com" target="_blank"> <div className='icon-item'>
-                    <img src={x} alt="x-icon" width={70}/>
+                    <img src={x} alt="x-icon" className="social-icon"/>
                     <p>X</p>
                 </div></a>
                 <a href="https://instagram.com" target="_blank"> <div className='icon-item'>
-                    <img src={insta} alt="instagram-icon" width={54}/>
+                    <img src={insta} alt="instagram-icon" className="social-icon"/>
                     <p>Instagram</p>
                 </div></a>
         </div>
