@@ -17,21 +17,6 @@ const BookingForm = ({availableTimes, dispatch, submitForm}) => {
     const [additionalInfo, setAdditionalInfo] = useState("");
     const [errors, setErrors] = useState({});
     
-    const validate = () => {
-        let errors = {};
-        if (!guest) {
-            errors.guest = 'Number of guests is required';
-          } else if (guest <= 0 || guest > 10) {
-            errors.guest = 'Guests must be between 1 and 10';
-          }
-
-
-        if (!date) {
-            errors.date = 'Date is required';
-          }
-         return errors;
-    };
-
     useEffect(() => {
         forceUpdate(1);
       });
@@ -58,23 +43,14 @@ const BookingForm = ({availableTimes, dispatch, submitForm}) => {
 
     const handleGuestsChange = (e) => {
         setGuest(e.target.value);
-        const currentErrors = validate();
-        setErrors(currentErrors);
       };
 
     const handleDateChange = (e) => {
         const selectedDate = new Date(e.target.value);
         setDate(e.target.value);
         dispatch({ type: 'UPDATE_TIMES', date: selectedDate });
-        const currentErrors = validate();
-        setErrors(currentErrors);
       };
       
-
-      const handleKeyDown = (event) => {
-        if (event.key !== 'ArrowUp' && event.key !== 'ArrowDown') {
-        }
-      };
 
     const handleSubmit = (e) => {
         
@@ -96,7 +72,7 @@ const BookingForm = ({availableTimes, dispatch, submitForm}) => {
             <form className='form-section' onSubmit={handleSubmit}>
                 <div className='guests'>
                     <label htmlFor='guests'>Number of guests *</label> <span>10 maximum</span>
-                    <input id="guests" value={guest} type="number" min="1" max="10" required onChange={handleGuestsChange} onKeyDown={e => {e.preventDefault()}}></input>
+                    <input id="guests" value={guest} type="number" min="1" max="10" required onChange={handleGuestsChange}></input>
                     {errors.guest && <p style={{ color: 'red' }}>{errors.guest}</p>}
                 </div>
                 <div className='date'>
