@@ -7,6 +7,10 @@ input, select, option {
     width: 20%;
 }
 
+input:focus:invalid {
+    margin: 1px solid red;
+}
+
 label {
     font-size: 25px;
     font-weight: bold;
@@ -143,6 +147,26 @@ select#occasion {
     color: white;
     transition: all 0.3s ease;
 }
+
+    .additional-info {
+    margin-top: 20px;
+  }
+    
+  .additional-info textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1rem;
+    resize: vertical;
+    font-family: 'Karla', serif;
+  }
+  
+  .additional-info textarea:focus {
+    border-color: #4caf50;
+    outline: none;
+    box-shadow: 0px 0px 5px rgba(76, 175, 80, 0.5);
+  }
 
 @media (max-width: 800px) {
     .form {

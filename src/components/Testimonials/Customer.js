@@ -1,19 +1,20 @@
 import './customers.css'
+import rating from '../../img/stars.png'
 
-const Customer = ({img, name, stars, review}) => {
+const Customer = ({img, name, review}) => {
     return (
         <article className="customersay">
             <div className='customerinfo'>
                 <div className="customerpic">
-                    <img src="https://thispersondoesnotexist.com/" alt="customer-pic"/>
+                    <img src={img} alt="customer-pic"/>
                 </div>
                 <div className='customerrating'>
-                    <h4>Hola</h4>
-                    <p>Aqui van las estrellas</p>
+                    <h4>{name}</h4>
+                    <img src={rating} alt="stars-rating" width={90}/>
                 </div>
             </div>
             <div className='customerreview'>
-                <p> JIJI</p>
+                <p>{review}</p>
             </div>
         </article>
     )

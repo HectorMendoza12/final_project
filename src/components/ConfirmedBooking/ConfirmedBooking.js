@@ -21,6 +21,9 @@ const ConfirmedBooking = () => {
                     <li>Guests: {formData.guest}</li>
                     <li>Date: {formData.date}</li>
                     <li>Time: {formData.time}</li>
+                    {formData.additionalInfo && (
+    <li>Additional info: {formData.additionalInfo}</li>
+  )}
                 </ul>
                 ) : (
                 <p>No data received</p>
