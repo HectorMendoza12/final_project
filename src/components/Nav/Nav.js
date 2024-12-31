@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import logo from '../../img/small_logo.jpg';
+import { Link } from 'react-router-dom';
 import './nav.css';
 
 const Navbar = () => {
@@ -16,11 +17,11 @@ const Navbar = () => {
                 <img src={logo} alt="logo" width={136} />
             </Link>
             <ul className={`links ${isOpen ? 'active' : ''}`}>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">MENU</a></li>
-                <li><Link to="/booking">RESERVATIONS</Link></li>
-                <li><a href="#">ORDER ONLINE</a></li>
-                <li><a href="#">LOGIN</a></li>
+                <li><HashLink to="/#aboutus" onClick={toggleMenu}>ABOUT</HashLink></li>
+                <li><HashLink to="/#menu" onClick={toggleMenu}>MENU</HashLink></li>
+                <li><Link to="/booking" onClick={toggleMenu}>RESERVATIONS</Link></li>
+                <li><HashLink to="/#" onClick={toggleMenu}>ORDER ONLINE</HashLink></li>
+                <li><HashLink to="/#" onClick={toggleMenu}>LOGIN</HashLink></li>
             </ul>
             <div
                 className={`hamburguer ${isOpen ? 'active' : ''}`}

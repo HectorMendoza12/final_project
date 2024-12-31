@@ -17,7 +17,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.5;
 }
 
-p, ul, li, span {
+p, ul, li, span, label, input, select, option {
   font-family: 'Karla', serif;
   letter-spacing: normal;
   font-size: 16px;

@@ -6,7 +6,7 @@ import brushetta from '../../img/brushetta.jpg';
 
 const Specials = () => {
     return(
-        <section style={{background: '#F4CE14'}}>
+        <section style={{background: '#F4CE14'}} id="menu">
             <div className='specials'>
                 <h3>Specials</h3>
                 <button className="order-online">Online Menu </button>

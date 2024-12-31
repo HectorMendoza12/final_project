@@ -5,9 +5,9 @@ import Footer from './Footer/Footer'
 const Homepage = () => {
     return(
         <>
-        <Header/>
-        <Main/>
-        <Footer/>
+            <Header/>
+            <Main/>
+            <Footer/>
 
         </>
     )

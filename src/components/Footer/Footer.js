@@ -2,6 +2,7 @@ import logo from '../../img/long_logo.PNG'
 import facebook from '../../img/facebook.png'
 import x from '../../img/X.png'
 import insta from '../../img/insta.png'
+import { Link } from 'react-router-dom'
 
 import './footer.css';
 const Footer = () => {
@@ -13,9 +14,9 @@ const Footer = () => {
             <div className='nav'>
                 <ul> <b>Dormat Navigation</b>
                     <li> <a href="#">Home</a></li>
-                    <li> <a href="#">About</a></li>
-                    <li> <a href="#">Menu</a></li>
-                    <li> <a href="#">Reservations</a></li>
+                    <li> <a href="#aboutus">About</a></li>
+                    <li> <a href="#menu">Menu</a></li>
+                    <li><Link to="/booking">Reservations</Link></li>
                     <li> <a href="#">Order Online</a></li>
                     <li> <a href="#">Login</a></li>
                 </ul>
